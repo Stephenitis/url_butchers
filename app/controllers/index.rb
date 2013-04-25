@@ -20,8 +20,7 @@ post '/create_user' do
 end
 
 post '/urls' do
-  p params
-  new_url = Url.create(params)
+  Url.create(params)
   redirect('/')
 end
 

@@ -8,7 +8,7 @@
     to URL Butchers!</h1>
     <p>We chop your URLS down to byte sizes!</p>
     <form id="chopper" method="post" action="/urls">
-      <input type="text" name="originalurl" placeholder="Enter a valid url here">
+      <input type="text" name="originalurl" placeholder="Enter a valid url here" value="http://">
       <input type="hidden" name="user_id" value="<%= current_user.id if current_user %>">
       <input type="submit" value="chop it!">
     </form>
