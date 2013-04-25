@@ -1,12 +1,22 @@
 .container {
-  margin: 100px auto;
-  width: 600px;
+  margin: 10% auto;
+  width: 70%;
   padding: 0px 20px 20px 20px;
   background-color: rgba(255, 255, 255, 0.75);
   border-width: 2px;
   border-style: solid;
   border-radius: 30px;
 }
+.container h1, p {
+  text-align: center;
+}
+
+.container #chopper {
+  margin: 0 
+  display: inline-block;
+  text-align: center;
+}
+
 th {
   text-align: left;
 }
@@ -21,14 +31,18 @@ body{
   top: 0px;
   width: 100%;
   background-color: black;
-  padding:10px 0 10px 0;
+  padding:10px 0 10px 20px;
+}
+table{
+  margin: 0 auto;
 }
 
 .nav a {
   color: white;
   text-decoration: none;
   float:right;
-    padding: 0 15px 0 0;
+  padding: 0 15px 0 0;
+  margin-right: 10px;
 
   /*padding: 10px, 20px, 10px, auto;*/
   /*margin: 10px;*/
@@ -54,10 +68,11 @@ footer{
   bottom: 0;
   width: 100%;
   color: white;
+  text-align: center;
 }
 footer a{
   font-size: 10px;
-    text-decoration: none;
-    color: white;
-    text-align: center;
+  text-align: center;
+  text-decoration: none;
+  color: white;
 }
