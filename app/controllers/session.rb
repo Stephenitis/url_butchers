@@ -10,12 +10,15 @@ end
 
 post '/session/create' do
   @user = User.find_by_email(params[:email])
-  if @user.password == params[:password]
-    give_token(@user)
-    redirect to('/session/profile')
-  else
-    redirect to('/')
+  if @user
+    if @user.password == params[:password]
+      give_token(@user)
+      redirect to('/session/profile')
+    else
+      redirect to('/')
+    end
   end
+  redirect to('/')
 end
 
 
