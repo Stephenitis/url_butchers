@@ -8,7 +8,6 @@ require 'bcrypt'
 
 # Require gems we care about
 require 'rubygems'
-require 'SecureRandom'
 require 'uri'
 require 'pathname'
 

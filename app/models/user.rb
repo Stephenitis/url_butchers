@@ -5,7 +5,8 @@ class User < ActiveRecord::Base
   before_save :generate_token
 
   def generate_token
-    self.token = SecureRandom.hex(5)
+    o =  [('a'..'z'),('A'..'Z'),(0..9)].map{|i| i.to_a}.flatten
+    self.token  =  (0...30).map{ o[rand(o.length)] }.join
   end
 
   def password
