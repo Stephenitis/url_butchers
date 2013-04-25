@@ -39,6 +39,9 @@ not_found do
   redirect to('/')
 end
 
+get '/error/500' do
+  erb :error500
+end
 
 error do
   erb :error500
