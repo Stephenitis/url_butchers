@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   # Remember to create a migration!
   include BCrypt
-
+  validates :email, :presence => true, :uniqueness => true, :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i}
   before_save :generate_token
 
   def generate_token
