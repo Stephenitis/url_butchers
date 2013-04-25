@@ -1,7 +1,5 @@
 before do
   #maybe have a helper here
-  #
-
 end
 
 get '/' do

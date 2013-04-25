@@ -1,7 +1,12 @@
 <div class="container">
-  <h1>Hi, <%= current_user.email %>. Welcome to URL Butchers!</h1>
+  <h1>Hi, <%= current_user.email %>. Good to see you home!!</h1>
   <p>We chop your URLS down to byte sizes!</p>
   <% if Url.where(user_id: current_user.id) %>
+  <form id="chopper" method="post" action="/urls">
+    <input type="text" name="originalurl" placeholder="Enter a valid url here">
+    <input type="hidden" name="user_id" value="<%= current_user.id if current_user %>">
+    <input type="submit" value="chop it!">
+  </form>
   <table border="5" class="profile">
     <tr>
       <td>Original:</td> 
@@ -16,5 +21,5 @@
     </tr>
     <% end %>
   </table>
-    <% end %>
+  <% end %>
 </div>

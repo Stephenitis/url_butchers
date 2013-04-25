@@ -21,9 +21,9 @@
   <div class="nav">
     <h1><a href="/">URL BUTCHERS</a></h1>
     <ul>
-    <% if logged_in? %><%= "<li><a href='/session/logout'>logout</a></li>" %><% end %>
-    <% unless logged_in? %><%= "<li><a href='/session/login'>login</a></li>" %><% end %>
-    <% unless logged_in? %><%= "<li><a href='/signup'>sign up</a></li>" %><% end %>
+    <% if current_user %><%= "<li><a href='/session/logout'>logout</a></li>" %><% end %>
+    <% unless current_user %><%= "<li><a href='/session/login'>login</a></li>" %><% end %>
+    <% unless current_user %><%= "<li><a href='/signup'>sign up</a></li>" %><% end %>
   </ul>
 </div>
   <%= yield %>
