@@ -9,14 +9,14 @@
   </form>
   <table border="5" class="profile">
     <tr>
-      <td>Original:</td> 
+      <td>Original:</td>
       <td>Shortened</td>
       <td>Hits</td>
     </tr>
     <% Url.where(user_id: current_user.id).sort_by {|user| user.counter}.each do |url| %>
     <tr>
-      <td><%= url.originalurl %></td> 
-      <td><a href="/<%= url.shorturl %>">www.ubu.pw/<%= url.shorturl %></a> </td>
+      <td><%= url.originalurl %></td>
+      <td><a href="/<%= url.shorturl %>">ubu.pw/<%= url.shorturl %></a> </td>
       <td><%= url.counter %></td>
     </tr>
     <% end %>
