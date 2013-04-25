@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Welcome <% if logged_in? %>
+    <a href="/session/profile"><%= current_user.email%></a>
+
+    <% else %>
+    <%= "Stranger" %>
+    <% end %>
+    to URL Butchers!</h1>
+    <p>We chop your URLS down to byte sizes!</p>
+    <form id="chopper" method="post" action="/urls">
+      <input type="text" name="originalurl" placeholder="Enter a valid url here">
+      <input type="hidden" name="user_id" value="<%= current_user.id if current_user %>">
+      <input type="submit" value="chop it!">
+    </form>
+    <table border="5" class="profile">
+      <tr>
+        <td>Original:</td> 
+        <td>Shortened</td>
+        <td>Hits</td>
+      </tr>
+      <% unless @all_urls == [] %>
+      <% @all_urls.each do |url| %>
+      <tr>
+        <td>Original:<a href="http://<%= url.originalurl %>"><%= url.originalurl %></a></td>
+        <td>Chopped:<a href="/<%= url.shorturl %>"/>localhost:9393/<%= url.shorturl %></a></td>
+        <td>Counter:<a href="/<%= url.shorturl %>">url.counter</a></td>
+      </tr>
+      <% end %>
+    </table>
+
+      <% else %>
+      <li><%= "You have no urls. Let's create some" %></li>
+      <% end %>
+    </ol>
+  </div>

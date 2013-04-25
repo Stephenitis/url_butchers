@@ -1,0 +1,63 @@
+.container {
+  margin: 100px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 30px;
+}
+th {
+  text-align: left;
+}
+body{
+  background-color: black;
+  background-image:url('http://24.media.tumblr.com/dc65938323e576c96b68e5b3893a41c9/tumblr_mln1yzdFYB1s9hkjlo1_1280.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.nav {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: black;
+  padding:10px 0 10px 0;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  float:right;
+    padding: 0 15px 0 0;
+
+  /*padding: 10px, 20px, 10px, auto;*/
+  /*margin: 10px;*/
+
+}
+.nav li{
+  display: inline;
+}
+
+.nav ul {
+  margin:10px;
+}
+
+.nav h1{
+  float:left;
+  display: inline;
+  margin: 0px;
+}
+
+footer{
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+}
+footer a{
+  font-size: 10px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Hi, <%= current_user.email %>. Welcome to URL Butchers!</h1>
+  <p>We chop your URLS down to byte sizes!</p>
+  <% if Url.where(user_id: current_user.id) %>
+  <table border="5" class="profile">
+    <tr>
+      <td>Original:</td> 
+      <td>Shortened</td>
+      <td>Hits</td>
+    </tr>
+    <% Url.where(user_id: current_user.id).sort_by {|user| user.counter}.each do |url| %>
+    <tr>
+      <td><%= url.originalurl %></td> 
+      <td><a href="/<%= url.shorturl %>"> ubu.pw/<%= url.shorturl %></a> </td>
+      <td><%= url.counter %></td>
+    </tr>
+    <% end %>
+  </table>
+    <% end %>
+</div>
